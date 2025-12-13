@@ -92,11 +92,8 @@ void print_main_menu_admin() {
   printf("|     7. Sort by Price                   |\n");
   printf("|     8. Inventory Summary               |\n");
   printf("|                                        |\n");
-  printf("|  [FILE OPERATIONS]                     |\n");
-  printf("|     9. Save & Exit                     |\n");
-  printf("|                                        |\n");
   printf("|  [EXIT]                                |\n");
-  printf("|     10. Logout                         |\n");
+  printf("|     9. Logout                          |\n");
   printf("+========================================+\n");
   printf("Choice: ");
 }
@@ -537,7 +534,6 @@ int main() {
                     else if (choice == 7) sortByPrice();
                     else if (choice == 8) printSummary();
                     else if (choice == 9) { saveToFile(); break; }
-                    else if (choice == 10) break;
                 }
             } else {
                 printf("Invalid credentials.\n");
