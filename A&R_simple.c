@@ -5,10 +5,6 @@
 #define ITEM_NAME_MAX 64
 #define LINE_BUF 256
 
-/* Ultra-simple analysis without storing items:
-   - Summary (SKUs, total units, total value)
-   - Low-stock list (re-reads file and prints matches)
-   Input file: inventory.txt (CSV: id,name,price,quantity) */
 static void print_summary(void) {
     FILE *f = fopen("inventory.txt", "r");
     if (!f) { printf("No inventory.txt found.\n"); return; }
@@ -76,7 +72,3 @@ void analysis_menu_simple(void) {
         while (getchar() != '\n');
     }
 }
-
-/* Example: if you want to run this file standalone for quick testing,
-   compile and run: gcc analysis_simple.c -o analysis_simple && ./analysis_simple
-   (or call analysis_menu_simple() from your main program). */
